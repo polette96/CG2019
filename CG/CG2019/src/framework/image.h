@@ -87,7 +87,9 @@ public:
 
 	#endif
 
-
+	void drawRectangle(int x, int y, int w, int h, Color color);
+	void drawCircle(int x, int y, int r, Color color);
+	void drawLine(int x1, int y1, int x2, int y2, Color color);
 };
 
 #endif

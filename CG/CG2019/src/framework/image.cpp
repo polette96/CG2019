@@ -248,3 +248,28 @@ void forEachPixel(Image& img, const Image& img2, F f) {
 }
 
 #endif
+void Image::drawRectangle(int x, int y, int w, int h, Color color)
+{
+	int startx = x - w/2; //la posicio inicial sera el centre del rectangle
+	int starty = y - h/2;
+
+	for (int x = startx; x < startx + w; x++)//recorrem ler horitzontals del rectangle (eix x)
+	{
+		setPixel(x, starty, color);//dibuixa una horitzontal
+		setPixel(x, starty + h, color);//dibuixa l'altre horitzontal
+	}
+
+	for (int y = starty; y < starty + h; y++)
+	{
+		setPixel(startx, y, color);
+		setPixel(startx + w, y, color);
+	}
+}
+void Image::drawCircle(int x, int y, int r, Color color)
+{
+
+}
+void  Image::drawLine(int x1, int y1, int x2, int y2, Color color)
+{
+
+}

@@ -31,18 +31,18 @@ void Application::init(void)
 void Application::render( Image& framebuffer )
 {
 	//clear framebuffer if we want to start from scratch
-	framebuffer.fill(Color::BLACK);
+	//framebuffer.fill(Color::BLACK);
 
 	//here you can add your code to fill the framebuffer
 
 	//fill every pixel of the image with some random data
-	for (unsigned int x = 0; x < framebuffer.width; x++)
-	{
-		for (unsigned int y = 0; y < framebuffer.height; y++)
-		{
-			framebuffer.setPixel(x, y, Color(randomValue() * 255, randomValue() * 255, randomValue() * 255)); //random color
-		}
-	}
+	//for (unsigned int x = 0; x < framebuffer.width; x++)
+	//{
+	//	for (unsigned int y = 0; y < framebuffer.height; y++)
+	//	{
+	//		framebuffer.setPixel(x, y, Color(randomValue() * 255, randomValue() * 255, randomValue() * 255)); //random color
+	//	}
+	//}
 }
 
 //called after render
@@ -81,6 +81,7 @@ void Application::onMouseButtonDown( SDL_MouseButtonEvent event )
 	if (event.button == SDL_BUTTON_LEFT) //left mouse pressed
 	{
 		//if you read mouse position from the event, careful, Y is reversed, use mouse_position instead
+		Application::framebuffer.drawRectangle(mouse_position.x, mouse_position.y, 300, 200, Color::BLUE);
 	}
 }
 

@@ -33,14 +33,6 @@ float Vector2::distance(const Vector2& v)
 	return (v - *this).length();
 }
 
-
-
-
-
-
-
-
-
 float Vector2::dot( const Vector2& v )
 {
 	return x * v.x + y * v.y;
